@@ -10183,7 +10183,7 @@ h5,
 }
 
 .photography-entry {
-    height: 270px;
+    height: 900px;
     display: block;
     z-index: 0;
     position: relative;
@@ -10233,6 +10233,60 @@ h5,
 
 .photography-entry:hover .text,
 .photography-entry:focus .text {
+    opacity: 1;
+}
+
+.videography-entry {
+    height: 300px;
+    display: block;
+    z-index: 0;
+    position: relative;
+}
+
+.videography-entry .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #000000;
+    opacity: 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.videography-entry .text {
+    opacity: 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.videography-entry .text h3 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.videography-entry .text span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.videography-entry:hover .overlay,
+.videography-entry:focus .overlay {
+    opacity: .7;
+}
+
+.videography-entry:hover .text,
+.videography-entry:focus .text {
     opacity: 1;
 }
 
