@@ -9841,7 +9841,7 @@ h5,
 }
 
 #colorlib-aside #colorlib-logo {
-    margin-bottom: 2.5em;
+    margin-bottom: 10px;
     display: block;
     width: 100%;
     font-weight: 900;
@@ -9939,6 +9939,7 @@ h5,
 }
 
 #colorlib-aside .colorlib-footer {
+    position: absolute;
     bottom: 40px;
     right: 1.5em;
     left: 1.5em;
