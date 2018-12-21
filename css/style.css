@@ -9803,7 +9803,7 @@ h5,
 
 #colorlib-aside {
     padding-top: 3em;
-    padding-bottom: 3em;
+    padding-bottom: 40px;
     padding-left: 3em;
     padding-right: 3em;
     width: 25%;
@@ -9939,7 +9939,6 @@ h5,
 }
 
 #colorlib-aside .colorlib-footer {
-    position: absolute;
     bottom: 40px;
     right: 1.5em;
     left: 1.5em;
