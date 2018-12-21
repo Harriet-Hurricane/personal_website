@@ -20,10 +20,10 @@
         //Server settings
         $mail->SMTPDebug = 0;                                 // 2 - Enables verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'smtp.hostinger.in';        // Specify main and backup SMTP servers
+        $mail->Host = 'smtp.hostinger.in';                    // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'noreply@yihanpeng.com';         // SMTP username
-        $mail->Password = 'opensesame';                     // SMTP password
+        $mail->Username = 'noreply@yihanpeng.com';            // SMTP username
+        $mail->Password = 'opensesame';                       // SMTP password
         $mail->SMTPSecure = 'TLS';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 587;                                    // TCP port to connect to
 
@@ -35,7 +35,7 @@
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = $subject;
-        $mail->Body    = 'You have received a message from '.$name.' on your website.<br/> Email:'.$email.'<br/> Message: <br/>'.$message;
+        $mail->Body    = 'You have received a message from '.$name.' on your website.<br/> Email:'.$email.'<br/> Message: <br/>'.$message.'<br/>';
 
         $mail->send();
     } catch (Exception $e) {
