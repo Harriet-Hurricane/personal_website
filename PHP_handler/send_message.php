@@ -1,4 +1,15 @@
-<?php
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	Hurricane Website
+	DESIGNED & DEVELOPED by Mayavan
+		
+	Website: 		http://yihanpeng.com/
+	Email: 			mayavan95@gmail.com
+
+	//////////////////////////////////////////////////////
+     -->
+    <?php
     session_start();
 
     // PHPMailer initialization
