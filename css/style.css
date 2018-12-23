@@ -650,6 +650,18 @@ pre code {
     padding-left: 0;
 }
 
+.no-gutters-900 {
+    margin-right: 0;
+    margin-left: 0;
+    height: 900px;
+}
+
+.no-gutters-900>.col,
+.no-gutters-900>[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .col-1,
 .col-2,
 .col-3,
@@ -10183,7 +10195,7 @@ h5,
 }
 
 .photography-entry {
-    height: 900px;
+    height: 100%;
     display: block;
     z-index: 0;
     position: relative;
@@ -10230,8 +10242,7 @@ h5,
     opacity: .7;
 }
 
-.photography-entry:focus {
-    transform: translateY(-90%);
+.photography-entry:focus .overlay {
     opacity: .7;
 }
 
@@ -10241,6 +10252,33 @@ h5,
 
 .photography-entry:focus .text {
     opacity: 1;
+}
+
+.photo {
+    height: 270px;
+    display: block;
+    z-index: 0;
+    position: relative;
+}
+
+.photo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #000000;
+    opacity: 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.photo:hover .overlay {
+    opacity: .7;
 }
 
 .videography-entry {

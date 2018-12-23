@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Yihan Peng - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Yihan Peng</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -66,9 +66,9 @@
         <div id="colorlib-main">
             <section class="ftco-section-2">
                 <div class="photograhy">
-                    <div class="row no-gutters">
+                    <div id="title" class="row no-gutters-900">
                         <div class="col-md-4">
-                            <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
+                            <a href="#" onclick="shrink('1')" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_1.jpg);">
                                 <div class="overlay"></div>
                                 <div class="text text-center">
                                     <h3>Myself</h3>
@@ -77,7 +77,7 @@
                             </a>
                         </div>
                         <div class="col-md-4">
-                            <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_2.jpg);">
+                            <a href="#" onclick="shrink('2')" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_2.jpg);">
                                 <div class="overlay"></div>
                                 <div class="text text-center">
                                     <h3>Photography</h3>
@@ -86,7 +86,7 @@
                             </a>
                         </div>
                         <div class="col-md-4">
-                            <a href="#" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_3.jpg);">
+                            <a href="#" onclick="shrink('3')" class="photography-entry img d-flex justify-content-center align-items-center" style="background-image: url(images/image_3.jpg);">
                                 <div class="overlay"></div>
                                 <div class="text text-center">
                                     <h3>Design</h3>
@@ -96,42 +96,23 @@
                         </div>
 
                     </div>
+                    <!-- Project memo -->
+                    <div id="picture-gallery" class="row no-gutters">
+                        <!-- Filled by js function call to jquery using Ajax to test.php -->
+                    </div>
                 </div>
             </section>
             <footer class="ftco-footer ftco-bg-dark ftco-section">
                 <div class="container px-md-5">
                     <div class="row mb-5">
                         <div class="col-md">
-                            <div class="ftco-footer-widget mb-4 ml-md-4">
-                                <h2 class="ftco-heading-2">Category</h2>
-                                <ul class="list-unstyled categories">
-                                    <li><a href="#">Photography <span>(6)</span></a></li>
-                                    <li><a href="#">Fashion <span>(8)</span></a></li>
-                                    <li><a href="#">Technology <span>(2)</span></a></li>
-                                    <li><a href="#">Travel <span>(2)</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <div class="ftco-footer-widget mb-4">
-                                <h2 class="ftco-heading-2">Archives</h2>
-                                <ul class="list-unstyled categories">
-                                    <li><a href="#">October 2018 <span>(6)</span></a></li>
-                                    <li><a href="#">September 2018 <span>(6)</span></a></li>
-                                    <li><a href="#">August 2018 <span>(8)</span></a></li>
-                                    <li><a href="#">July 2018 <span>(2)</span></a></li>
-                                    <li><a href="#">June 2018 <span>(7)</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <div class="ftco-footer-widget mb-4">
+                            <div class="ftco-footer-widget mb-12">
                                 <h2 class="ftco-heading-2">Have a Questions?</h2>
                                 <div class="block-23 mb-3">
                                     <ul>
-                                        <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                                        <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                                        <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                                        <li><span class="icon icon-map-marker"></span><span class="text">Malbourgh way, College Park Woods, College Park, MD, USA</span></li>
+                                        <li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 2409061091</span></a></li>
+                                        <li><a href="#"><span class="icon icon-envelope"></span><span class="text">yihan.peng@rhsmith.umd.edu</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -178,6 +159,19 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+
+    <script type='text/javascript'>
+        function shrink(category) {
+            // Shrink the title
+            $("#title").animate({
+                height: "100px"
+            });
+            // Load the gallery
+            $("#picture-gallery").load("gallery.php", {
+                'category': category
+            });
+        }
+    </script>
 
 </body>
 
