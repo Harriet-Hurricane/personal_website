@@ -10226,12 +10226,19 @@ h5,
     color: rgba(255, 255, 255, 0.8);
 }
 
-.photography-entry:hover .overlay,
-.photography-entry:focus .overlay {
+.photography-entry:hover .overlay {
     opacity: .7;
 }
 
-.photography-entry:hover .text,
+.photography-entry:focus {
+    transform: translateY(-90%);
+    opacity: .7;
+}
+
+.photography-entry:hover .text {
+    opacity: 1;
+}
+
 .photography-entry:focus .text {
     opacity: 1;
 }
