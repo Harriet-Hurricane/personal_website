@@ -29,16 +29,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <?php
-        $id = intval($_GET['id']);
-        echo 'window.onload = function() {
-            load_memo(\''.$id.'\');
-        };';   
-    
- 
-    ?>
+<script type="text/javascript">       
+    function load_memo(project) {
+        $("#project-memo").load("memo.php", {
+            'project': project
+        });
+    }    
+    window.onload = function() {
+            load_memo('1');
+        };
+     
+</script>
+<?php
+    $id = $_GET['id'];
+    echo "<script> window.onload = function() {
+        load_memo('".$id."');
+    };</script>";
+    ?>  
 
+<body>
     <div id="colorlib-page">
         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
@@ -156,13 +165,7 @@
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
 
-    <script type="text/javascript">       
-        function load_memo(project) {
-            $("#project-memo").load("memo.php", {
-                'project': project
-            });
-        }       
-    </script>
+    
 
 </body>
 
