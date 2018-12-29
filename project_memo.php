@@ -30,6 +30,14 @@
 </head>
 
 <body>
+    <?php
+        $id = intval($_GET['id']);
+        echo 'window.onload = function() {
+            load_memo(\''.$id.'\');
+        };';   
+    
+ 
+    ?>
 
     <div id="colorlib-page">
         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
@@ -148,22 +156,12 @@
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
 
-    <script type="text/javascript">
-        function httpGet(theUrl)
-        {
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-            xmlHttp.send( null );
-            return xmlHttp.responseText;
-        }
+    <script type="text/javascript">       
         function load_memo(project) {
             $("#project-memo").load("memo.php", {
                 'project': project
             });
-        }
-        window.onload = function() {
-            load_memo('1');
-        };
+        }       
     </script>
 
 </body>
