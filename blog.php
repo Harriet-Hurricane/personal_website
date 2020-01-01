@@ -132,8 +132,66 @@
 	else if($project=="b")
 	{
 		?>
+        <section class="ftco-section">
+            <div class="container">               
+                <div class="col-md-12">
+                    <div class="blog-entry ftco-animate">
+                        <!-- Here is how you add different Headings --> 
+                        <h1 class="mb-4">Customer Journey Segmentation</h1>
 
-        <p> Hello testing 2</p>
+                        <!-- This is how you add code -->
+                        <pre class="pre-scrollable">
+                        Text in a pre element
+                        is displayed in a fixed-width
+                        font, and it preserves
+                        both      spaces and
+                        line breaks.</pre>
+                        
+                        <!-- Here is how you add Images Note: Images used here should be added to the images folder --> 
+                        <a href="#" class="img img-2" style="background-image: url(images/image_1.jpg);"></a>
+                        
+                        <!-- Here is some examples of text formating -->
+                        <div class="text text-2 pt-2 mt-3">
+                            <span class="category mb-3 d-block"><a href="#"> Linear, semi-log, log-log
+                                    regression models </a></span>
+                    
+                            <p class="mb-4 small">Excellent to include <mark>store dummies that capture
+                                    unobserved differences</mark> between stores in terms of sales, and a
+                                <mark>psychological price dummy</mark>which has a significant effect; Quantitative interpretation of the coefficients are detailed and communicative to non-technical; optimal price is good.
+                            </p>
+                        </div>
+
+                        <!-- Here is example of table -->
+                        <div class="table-responsive">          
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Age</th>
+                                <th>City</th>
+                                <th>Country</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Anna</td>
+                                <td>Pitt</td>
+                                <td>35</td>
+                                <td>New York</td>
+                                <td>USA</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+
+                    </div>
+                </div>  
+            </div>
+        </section>
+
 
         <?php
     }		
