@@ -29,7 +29,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<script type="text/javascript">       
+<script type="text/javascript"> 
+    function load_blog(project) {
+        $("#project-memo").load("blog.php", {
+            'project': project
+        });
+    }       
     function load_memo(project) {
         $("#project-memo").load("memo.php", {
             'project': project
@@ -42,9 +47,18 @@
 </script>
 <?php
     $id = $_GET['id'];
-    echo "<script> window.onload = function() {
-        load_memo('".$id."');
-    };</script>";
+    if(1 === preg_match('~[0-9]~', $id))
+    {
+        echo "<script> window.onload = function() {
+            load_memo('".$id."');
+        };</script>";
+    }
+    else if(1 === preg_match('~[a-z]~', $id))
+    {   
+        echo "<script> window.onload = function() {
+            load_blog('".$id."');
+        };</script>";
+    }	
     ?>  
 
 <body>
@@ -58,6 +72,7 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="resume.html">Résumé</a></li>
                     <li class="colorlib-active"><a href="projects.html">Projects</a></li>
+                    <li><a href="visualizer.html">Data Visualizer</a></li>
                     <li><a href="videocreation.html">Video Creation</a></li>
                     <li><a href="Pictures.html">Pictures</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -94,7 +109,9 @@
                         <div class="col-lg-2 sidebar ftco-animate">
                             <div class="sidebar-box ftco-animate">
                                 <h3 class="sidebar-heading">Projects</h3>
-                                <ul class="categories">
+                                <ul class="categories">                               
+                                    <li><a href="#" onclick="load_blog('a')">ALP Google Analytics Project</a></li>
+                                    <li><a href="#" onclick="load_blog('b')">Customer Journey Segmentation</a></li>
                                     <li><a href="#" onclick="load_memo('1')">Pricing Decision</a></li>
                                     <li><a href="#" onclick="load_memo('2')">Printed Ad Optimization</a></li>
                                     <li><a href="#" onclick="load_memo('3')">Sales Promotion Effectiveness</a></li>
