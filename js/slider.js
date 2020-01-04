@@ -1,5 +1,5 @@
 var slideIndex = 1;
-var totalSlideCount = 3;
+var totalSlideCount = 5;
 showSlides(slideIndex);
 
 function plusSlides(n) {

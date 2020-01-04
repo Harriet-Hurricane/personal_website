@@ -68,10 +68,71 @@
                 <div class="col-md-12">
                     <div class="blog-entry ftco-animate">
                         <!-- Here is how you add different Headings --> 
-                        <h1 class="mb-4">ALP Google Analytics Project H1</h1>
-                        <h2 class="mb-4">ALP Google Analytics Project H2</h2>
+                        <h1 class="mb-4">ALP Google Analytics Project</h1>
+                        <h2 class="mb-4">Introduction</h2>
+                        <p> The 80/20 rule has proven true for many businesses -- only a small percentage of customers produce most of the revenue. As such, marketing teams are challenged to make appropriate investments in promotional strategies. In this competition, I am challenged to analyze a Google Merchandise Store (also known as GStore, where Google swag is sold) customer dataset to predict revenue per customer.</p>
+                        
+                        <h2 class="mb-4">Data Summary</h2>
+                        Two data was given – “train” dataset that is used to train the model, and “test” dataset that is waiting to be predicted. In both dataset there are 12 columns in total, and 4 of them are JSON columns.
+                        
+                        <!-- Table to be added -->
+
+                        <p> After flattening the 4 JSON columns, there are in total 55 variables in train dataset. </p>
+
+                        <h2 class="mb-4">Data Cleaning and Feature Engineering</h2>
+
+                        <p> I used three methods to clean data and engineer features in this project – dummize, delete, substitute and create variables. </p>
+
+                        <ul>
+                            <li>I <mark>dummy-coded</mark> following variables: channelgrouping, browser, OperatingSystem, isMobile, deviceCategory, continent, subcontinent, country, region, metro, city, bounces, newVisits, campaign, source, medium, isTrueDirect. After being handled, these variables either became one or multiple variables that take value 0 or 1. For example, “newVisits” became a binary variable which took value 0 or 1, and “channelgrouping” variable become another 8 variables named Direct, Organic Search, Referral, Social, Paid Search, Affiliates and Others whose observations are either 0 or 1 to indicate if this visit came in via these marketing channels.</li>
+                            <li>I <mark>deleted</mark> variables that has more than 90% null value, and they are: SocialEngagementType, visited, browserVersion, browserSize, operatingSystemVersion, mobileDeviceBranding, mobileDeviceModel, mobileInputSelector, mobileDeviceInfo, mobileDeviceMarketingName, flashVersion, language, screenColors, screenResolution, cityID, networkDomain, latitude, longitude, networkLocation, keyword, referralPath, adContent-adwordsClickInfo.isVideoAd</li>
+                            <li>I <mark>substituted</mark> null value with other values, for page view I filled missing value with median value 1, and I replaced NA with 0 in transaction revenue.</li>
+                            <li>I <mark>created</mark> a new variable qrt based on Date indicating visiting quarter, and hour variable based on visitStartTime to get hour information of each visit.</li>
+                        </ul>
+
+                        <p>After data cleaning, there are 140 variables in total in the dataset.</p>
+
+                        <h2 class="mb-4">Visualization </h2>
+
+                        <p> With clean dataset, let’s find out some patterns in the data using some tableau visualizations.</p>
+
+                        <a href="images/audience.png" class="img" style="background-image: url(images/audience.png);"></a>
+
+                        <p> As shown in above dashboard, 
+
+                        <ol>
+                            <li>Most of the visitors are new visitors, and they are 2.5 times more than returning visitors</li>
+                            <li>Returning visitors have higher average page view, hits, visit number than new visitors. This bar chart demonstrates a reasonable situation where almost 80% of the visits is from new visitors, while the 20% returning visitors has higher engagement and stickiness to the store.</li>
+                        </ol>
+                        
+                        </p>
+
+                        <a href="images/channel_performance_matrix.png" class="img" style="background-image: url(images/channel_performance_matrix.png);"></a>
+
+                        <p>From above graph, it’s clear that organic search acquired the most traffic, however the transaction revenue generated was less than other channels, which leads to its mediocre conversion rate; Referral channel has the highest transaction revenue and conversion rate.</p>
+
+                        <a href="images/Most Visited Time.png" class="img" style="background-image: url(images/most_visited_time.png);"></a>
+                        <p>Most visited hour of the day was 18:00, most visited weekday was Tuesday and most visited month was November 2016.</p>
+
+                        <a href="#" class="img img-2" style="background-image: url(images/traffic_by_bod.png);"></a>
+                        <p>Chrome browser was the top traffic and revenue lead, so was desktop device; However, in terms of operation system, even though windows acquired the most traffic, more transaction revenue were generated by Android, IOS and Linux. </p>
+                        
+                        <a href="#" class="img img-2" style="background-image: url(images/transaction_revenue_by_geo_location.png);"></a>
+                        
+                        <p>Most of the revenue was generated in the United State. On the west coast, top 1 revenue region was San Francisco which contributed $19.50 billion, followed by Los Angeles which contributed $7.02 billion and Seattle with $4.67 billion. On the east coast, New York generated $39.14 billion, followed by Chicagos $15.12 billion and Ann Arbors $4.30 billion.</p>
+                        
+                        <h2 class="mb-4">Modelling</h2>
+                        <p></p>
+                        <p></p>
+
                         <h3 class="mb-4">ALP Google Analytics Projec H3</h3>
                         <h4 class="mb-4">ALP Google Analytics Project H4</h4>
+
+                        <ul>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Milk</li>
+                        </ul>
 
                         <!-- This is how you add code -->
                         <pre class="pre-scrollable">

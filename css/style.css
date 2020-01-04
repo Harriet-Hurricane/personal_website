@@ -11126,6 +11126,12 @@ textarea.form-control {
     background-position: center center;
 }
 
+.img-normal {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .image-popup {
     cursor: -webkit-zoom-in;
     cursor: -moz-zoom-in;
