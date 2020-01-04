@@ -30,7 +30,15 @@
     <link rel="stylesheet" href="css/slider.css">
 </head>
 
+<script type="text/javascript">
+    function load_slider(project) {
+        $("#slider-loader").load("slider.html");
+    }
 
+    window.onload = function() {
+        load_slider();
+    };
+</script>
 
 <body>
     <div id="colorlib-page">
@@ -43,7 +51,7 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="resume.html">Résumé</a></li>
                     <li><a href="project_memo.php?id=a">Projects</a></li>
-                    <li class="colorlib-active"><a href="visualizer.html">Data Visualizer</a></li>
+                    <li class="colorlib-active"><a href="visualizer.html">Data Visualization</a></li>
                     <li><a href="videocreation.html">Video Creation</a></li>
                     <li><a href="Pictures.html">Pictures</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -71,124 +79,14 @@
             <section class="ftco-section">
                 <div class="row justify-content-center">
                     <div class="col-md-7 heading-section text-center ftco-animate">
-                        <h2 class="mb-4">Data Visualizer</h2>
+                        <h2 class="mb-4">Data Visualization</h2>
+
+                        <p class="mb-4 text-dark"> With clean dataset, let’s find out some patterns in the data using some tableau visualizations.</p>
                     </div>
                 </div>
-                <div class="slideshow-container">
 
-                    <div class="mySlides fading">
-                        <div class="numbertext">1 / 5</div>
-                        <img src="images/audience.png" style="width:100%">
-                        <br>
-                        <br>
 
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                            <span class="dot" onclick="currentSlide(5)"></span>
-                        </div>
-
-                        <div class="row justify-content-left mb-5 pb-2">
-                            <div class="col-md-7 heading-section text-left ftco-animate">
-                                <h2 class="mb-4">Audience</h2>
-                                <p> Yet to be updated. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mySlides fading">
-                        <div class="numbertext">2 / 5</div>
-                        <img src="images/channel_performance_matrix.png" style="width:100%">
-                        <br>
-                        <br>
-
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                            <span class="dot" onclick="currentSlide(5)"></span>
-                        </div>
-
-                        <div class="row justify-content-left mb-5 pb-2">
-                            <div class="col-md-7 heading-section text-left ftco-animate">
-                                <h2 class="mb-4">Channel Performance Matrix</h2>
-                                <p> Yet to be updated. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mySlides fading">
-                        <div class="numbertext">3 / 5</div>
-                        <img src="images/most_visited_time.png" style="width:100%">
-                        <br>
-                        <br>
-
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                            <span class="dot" onclick="currentSlide(5)"></span>
-                        </div>
-
-                        <div class="row justify-content-left mb-5 pb-2">
-                            <div class="col-md-7 heading-section text-left ftco-animate">
-                                <h2 class="mb-4">Most Visited Time</h2>
-                                <p> Yet to be updated. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mySlides fading">
-                        <div class="numbertext">4 / 5</div>
-                        <img src="images/traffic_by_bod.png" style="width:100%">
-                        <br>
-                        <br>
-
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                            <span class="dot" onclick="currentSlide(5)"></span>
-                        </div>
-
-                        <div class="row justify-content-left mb-5 pb-2">
-                            <div class="col-md-7 heading-section text-left ftco-animate">
-                                <h2 class="mb-4">Traffic by bod</h2>
-                                <p> Yet to be updated. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mySlides fading">
-                        <div class="numbertext">5 / 5</div>
-                        <img src="images/transaction_revenue_by_geo_location.png" style="width:100%">
-                        <br>
-                        <br>
-
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                            <span class="dot" onclick="currentSlide(5)"></span>
-                        </div>
-
-                        <div class="row justify-content-left mb-5 pb-2">
-                            <div class="col-md-7 heading-section text-left ftco-animate">
-                                <h2 class="mb-4">Transaction Revenue by Geo Location</h2>
-                                <p> Yet to be updated. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+                <div id="slider-loader">
                 </div>
 
             </section>

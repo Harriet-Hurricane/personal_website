@@ -45,6 +45,7 @@
         };
      
 </script>
+
 <?php
     $id = $_GET['id'];
     if(1 === preg_match('~[0-9]~', $id))
@@ -72,7 +73,7 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="resume.html">Résumé</a></li>
                     <li class="colorlib-active"><a href="projects.html">Projects</a></li>
-                    <li><a href="visualizer.html">Data Visualizer</a></li>
+                    <li><a href="visualizer.html">Data Visualization</a></li>
                     <li><a href="videocreation.html">Video Creation</a></li>
                     <li><a href="Pictures.html">Pictures</a></li>
                     <li><a href="contact.html">Contact</a></li>
