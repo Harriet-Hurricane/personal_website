@@ -83,6 +83,7 @@
                         <p class="mb-4 text-dark">Two data was given – “train” dataset that is used to train the model, and “test” dataset that is waiting to be predicted. In both dataset there are 12 columns in total, and 4 of them are JSON columns.</p>
                         
                         <!-- Table to be added -->
+                        <img src="images/dataset" style="width:100%">
 
                         <p class="mb-4 text-dark"> After flattening the 4 JSON columns, there are in total 55 variables in train dataset. </p>
 
