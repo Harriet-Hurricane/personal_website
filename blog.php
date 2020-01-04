@@ -68,6 +68,7 @@
                 <div class="col-md-12">
                     <div class="blog-entry ftco-animate">
                         <!-- Here is how you add different Headings --> 
+<<<<<<< HEAD
                         <h1 class="mb-4">ALP Google Analytics Project</h1>
                         <h2 class="mb-4">Introduction</h2>
                         <p> The 80/20 rule has proven true for many businesses -- only a small percentage of customers produce most of the revenue. As such, marketing teams are challenged to make appropriate investments in promotional strategies. In this competition, I am challenged to analyze a Google Merchandise Store (also known as GStore, where Google swag is sold) customer dataset to predict revenue per customer.</p>
@@ -124,6 +125,20 @@
                         <h2 class="mb-4">Modelling</h2>
                         <p></p>
                         <p></p>
+=======
+                        <h1 class="mb-5 p font-weight-bold display-4">Google Analytics Customer Revenue Prediction</h1>
+
+                        <p class="mb-4 text-dark">The 80/20 rule has proven true for many businesses -- only a small percentage of customers produce most of the revenue. 
+                            As such, marketing teams are challenged to make appropriate investments in promotional strategies. In this competition, I am challenged 
+                            to analyze a Google Merchandise Store (also known as GStore, where Google swag is sold) customer dataset to predict revenue per customer.
+                            </p>
+
+                        <h2 class="mb-4">What data do I have?</h2>
+                        <h2 class="mb-4">What do I do to deal with the data?</h2>
+                        <h2 class="mb-4">How do I select features?</h2>
+                        <h2 class="mb-4">How do I build the models?</h2>
+                        <h2 class="mb-4">How well did the model perform?</h2>
+>>>>>>> 9bb40475318349b0acd81760b7e05e21765a9fa7
 
                         <h3 class="mb-4">ALP Google Analytics Projec H3</h3>
                         <h4 class="mb-4">ALP Google Analytics Project H4</h4>
