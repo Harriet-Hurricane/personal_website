@@ -210,7 +210,7 @@
                                 <p class="font-weight-normal"> Other than logistics regression, I also tried random forest and K-nearest-neighbor to do the classification, 
                                     but the results were not as good: </p>      
                                 
-                                <img src="images/Code_5.PNG" style="width:100%">
+                                <img src="images/code_5.PNG" style="width:100%">
                                 <img src="images/Code_6.PNG" style="width:100%">
                                 <p class="font-weight-normal"> Therefore, logistics regression model was chosen to be the final classification model.</p>
                             </li>
