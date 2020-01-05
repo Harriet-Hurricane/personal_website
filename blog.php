@@ -83,7 +83,7 @@
                         <p class="mb-4 text-dark">Two data was given – “train” dataset that is used to train the model, and “test” dataset that is waiting to be predicted. In both dataset there are 12 columns in total, and 4 of them are JSON columns.</p>
                         
                         <!-- Table to be added -->
-                        <img src="images/dataset" style="width:100%">
+                        <img src="images/dataset.jpeg" style="width:100%">
 
                         <p class="mb-4 text-dark"> After flattening the 4 JSON columns, there are in total 55 variables in train dataset. </p>
 
@@ -185,9 +185,9 @@
                                 <p class="font-weight-normal"> Under-sampling means to sample less observations from the majority class which is not purchased in this case.  
                                     As we can see, before under-sampling, there were more than 44K 0 exists, while there were only 5733 instances of 1. </p>
                             
-                                <img src="images/Code_1" style="width:100%">
+                                <img src="images/Code_1.PNG" style="width:100%">
                                 <p class="font-weight-normal">After under-sampling, there were same amount of 0 and 1 labels in the dataset. </p>      
-                                <img src="images/Code_2" style="width:100%">
+                                <img src="images/Code_2.PNG" style="width:100%">
                                 <p class="font-weight-normal">Now that we have a balanced dataset, we are ready to do train-test split and proceed to modeling phase. </p>   
                             </li>
                             <li>
@@ -205,13 +205,13 @@
                                     With above features, the logistics model yielded a recall score of 0.757, F1 score of 0.800, and AUC of 0.81. Followed was its ROC curve:
                                 </p>
                             
-                                <img src="images/plot_3" style="width:100%">
-                                <img src="images/summery_4" style="width:100%">
+                                <img src="images/plot_3.PNG" style="width:100%">
+                                <img src="images/summery_4.PNG" style="width:100%">
                                 <p class="font-weight-normal"> Other than logistics regression, I also tried random forest and K-nearest-neighbor to do the classification, 
                                     but the results were not as good: </p>      
                                 
-                                <img src="images/Code_5" style="width:100%">
-                                <img src="images/Code_6" style="width:100%">
+                                <img src="images/Code_5.PNG" style="width:100%">
+                                <img src="images/Code_6.PNG" style="width:100%">
                                 <p class="font-weight-normal"> Therefore, logistics regression model was chosen to be the final classification model.</p>
                             </li>
                             <li>
@@ -224,10 +224,10 @@
                                         dependent variable, is transaction revenue which varies from 0 to 8,508,873,258.
                                 </p>
                             
-                                <img src="images/plot_7" style="width:100%">
+                                <img src="images/plot_7.png" style="width:100%">
                                 <p class="font-weight-normal"> Original transaction revenue values do not follow normal distribution, so firstly, transformation must 
                                     be done to the data so that they follow the assumption of regression model. Here we will take the log form of transaction revenue.</p>   
-                                <img src="images/plot_8" style="width:100%">   
+                                <img src="images/plot_8.png" style="width:100%">   
                                 <p class="font-weight-normal"> After transforming, compared to the previous distribution, the dependent variable almost fit into a normal 
                                     distribution, which complied with the assumption of linear regression. </p>   
                                 <p class="font-weight-normal"> Secondly, stepwise selection was used for feature selection for GLM model. Stepwise regression is a way to 
