@@ -112,7 +112,7 @@
                                 <h3 class="sidebar-heading">Projects</h3>
                                 <ul class="categories">                               
                                     <li><a href="#" onclick="load_blog('a')">ALP Google Analytics Project</a></li>
-                                    <li><a href="#" onclick="load_blog('b')">Customer Journey Segmentation</a></li>
+                                    <li><a href="#" onclick="load_memo('6')">Customer Journey Segmentation</a></li>
                                     <li><a href="#" onclick="load_memo('1')">Pricing Decision</a></li>
                                     <li><a href="#" onclick="load_memo('2')">Printed Ad Optimization</a></li>
                                     <li><a href="#" onclick="load_memo('3')">Sales Promotion Effectiveness</a></li>

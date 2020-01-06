@@ -66,6 +66,10 @@
 	{
 		echo "<iframe class=\"scribd_iframe_embed\" title=\"Project 5\" src=\"https://www.scribd.com/embeds/396198287/content?start_page=1&view_mode=scroll&show_recommendations=false&access_key=key-zvo4uKoQoTeIqUVsEWgN\" data-auto-height=\"true\" data-aspect-ratio=\"null\" scrolling=\"no\" width=\"100%\" height=\"900\" frameborder=\"0\"></iframe>";
 	}
+	else if($project=="6")
+	{
+		echo "<iframe class=\"scribd_iframe_embed\" title=\"Customer Journey Report-final\" src=\"https://www.scribd.com/embeds/441809855/content?start_page=1&view_mode=scroll&access_key=key-0dQfvxjlQ0ciYwfbV37V\" data-auto-height=\"true\" data-aspect-ratio=\"null\" scrolling=\"no\" width=\"100%\" height=\"900\" frameborder=\"0\"></iframe>";
+	}
 
     
 ?>
