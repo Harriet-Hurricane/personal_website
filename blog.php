@@ -75,12 +75,12 @@
                 <div class="col-md-12">
                     <div class="blog-entry ftco-animate">
                         <!-- Here is how you add different Headings --> 
-                        <h1 class="mb-5 p font-weight-bold display-4">ALP Google Analytics Project</h1>
+                        <h1 class="mb-5 p font-weight-bold display-4">Google Analytics Customer Revenue Prediction</h1>
                         <h2 class="mb-4 font-weight-bold">Introduction</h2>
                         <p class="mb-4 text-dark"> The 80/20 rule has proven true for many businesses -- only a small percentage of customers produce most of the revenue. As such, marketing teams are challenged to make appropriate investments in promotional strategies. In this competition, I am challenged to analyze a Google Merchandise Store (also known as GStore, where Google swag is sold) customer dataset to predict revenue per customer.</p>
                         
                         <h2 class="mb-4 font-weight-bold">Data Summary</h2>
-                        <p class="mb-4 text-dark">Two data was given – “train” dataset that is used to train the model, and “test” dataset that is waiting to be predicted. In both dataset there are 12 columns in total, and 4 of them are JSON columns.</p>
+                        <p class="mb-4 text-dark">Two dataset are given – “train” dataset that is used to train the model, and “test” dataset that is waiting to be predicted. In both dataset there are 12 columns in total, and 4 of them are JSON columns.</p>
                         
                         <!-- Table to be added -->
                         <img src="images/dataset.jpeg" style="width:100%">
@@ -89,12 +89,12 @@
 
                         <h2 class="mb-4 font-weight-bold">Data Cleaning and Feature Engineering</h2>
 
-                        <p class="mb-4 text-dark"> I used three methods to clean data and engineer features in this project – dummize, delete, substitute and create variables.
+                        <p class="mb-4 text-dark"> I used three methods to clean the data and engineer features in this project – dummize, delete, substitute and create variables.
 
                         <ul class="mb-4 text-dark">
-                            <li>I <mark>dummy-coded</mark> following variables: channelgrouping, browser, OperatingSystem, isMobile, deviceCategory, continent, subcontinent, country, region, metro, city, bounces, newVisits, campaign, source, medium, isTrueDirect. After being handled, these variables either became one or multiple variables that take value 0 or 1. For example, “newVisits” became a binary variable which took value 0 or 1, and “channelgrouping” variable become another 8 variables named Direct, Organic Search, Referral, Social, Paid Search, Affiliates and Others whose observations are either 0 or 1 to indicate if this visit came in via these marketing channels.</li>
-                            <li>I <mark>deleted</mark> variables that has more than 90% null value, and they are: SocialEngagementType, visited, browserVersion, browserSize, operatingSystemVersion, mobileDeviceBranding, mobileDeviceModel, mobileInputSelector, mobileDeviceInfo, mobileDeviceMarketingName, flashVersion, language, screenColors, screenResolution, cityID, networkDomain, latitude, longitude, networkLocation, keyword, referralPath, adContent-adwordsClickInfo.isVideoAd</li>
-                            <li>I <mark>substituted</mark> null value with other values, for page view I filled missing value with median value 1, and I replaced NA with 0 in transaction revenue.</li>
+                            <li>I <mark>dummy-coded</mark> following variables: channelgrouping, browser, OperatingSystem, isMobile, deviceCategory, continent, subcontinent, country, region, metro, city, bounces, newVisits, campaign, source, medium, isTrueDirect. After being handled, these variables either became one or multiple variables that take value 0 or 1. For example, “newVisits” became a binary variable which took value 0 or 1 indicating if the visitors were new visitors, and “channelgrouping” variable became another 8 variables named Direct, Organic Search, Referral, Social, Paid Search, Affiliates and Others whose observations were either 0 or 1 to indicate if this visit came in via these marketing channels.</li>
+                            <li>I <mark>deleted</mark> variables that had more than 90% null value, and they were: SocialEngagementType, visited, browserVersion, browserSize, operatingSystemVersion, mobileDeviceBranding, mobileDeviceModel, mobileInputSelector, mobileDeviceInfo, mobileDeviceMarketingName, flashVersion, language, screenColors, screenResolution, cityID, networkDomain, latitude, longitude, networkLocation, keyword, referralPath, adContent-adwordsClickInfo.isVideoAd</li>
+                            <li>I <mark>substituted</mark> null value with other values, for page view I filled missing values with median value 1, and I replaced NA with 0 in transaction revenue.</li>
                             <li>I <mark>created</mark> a new variable qrt based on Date indicating visiting quarter, and hour variable based on visitStartTime to get hour information of each visit.</li>
                         </ul>
 
@@ -114,8 +114,8 @@
        
                         <h2 class="mb-4 font-weight-bold">Modelling</h2>
 
-                        <h4 class="mb-4 font-weight-bold">Marketing Attribution Modeling with Sharpley value</h4>
-                        <p class="mb-4 text-dark">In order to understand visitor’s behavior, Sharpley value approach was used to find out 8 channels’ marginal contribution to conversion. 
+                        <h4 class="mb-4 font-weight-bold">Marketing Attribution Modeling with Shapley value</h4>
+                        <p class="mb-4 text-dark">In order to understand visitor’s behavior, Shapley value approach was used to find out 8 channels’ marginal contribution to conversion. 
                             In game theory, the Shapley value is a solution concept of fairly distributing both gains and costs to several actors working in coalition. 
                             The Shapley value applies primarily in situations when the contributions of each actor are unequal, but they work in cooperation with each other to obtain the payoff. 
                             I followed the tutorial offered by <a href="http://datafeedtoolbox.com/attribution-theory-the-two-best-models-for-algorithmic-marketing-attribution-implemented-in-apache-spark-and-r/">Trevor Paulsen at The Data Feed Toolbox</a> and here is the results:</p>
@@ -173,7 +173,7 @@
                         </table>
                         </div>
 
-                        <p class="mb-4 text-dark">Referral has the highest marginal contribution to the conversion, followed by Organic Search. However, Affiliate channel has a minus Sharpley value which means it has negative effect on conversion.</p> 
+                        <p class="mb-4 text-dark">Referral has the highest marginal contribution to the conversion, followed by Organic Search. However, Affiliate channel has a negative Shapley value which means it has negative effect on conversion.</p> 
                         
                         <h4 class="mb-4 font-weight-bold">Transaction Revenue Prediction Model</h4>
                         
@@ -206,7 +206,7 @@
                                 </p>
                             
                                 <img src="images/plot_3.PNG" style="width:100%">
-                                <img src="images/summery_4.PNG" style="width:100%">
+                                <img src="images/summary_4.PNG" style="width:100%">
                                 <p class="font-weight-normal"> Other than logistics regression, I also tried random forest and K-nearest-neighbor to do the classification, 
                                     but the results were not as good: </p>      
                                 
@@ -217,7 +217,7 @@
                             <li>
                                 <p class="font-weight-bold">Generalized Linear Regression Model<p>
                                 <p class="font-weight-normal">As the second step, Generalized Linear Regression Model was used to predict purchase amount for each 
-                                    individual visit. Note that in this step, only the observations that have transaction revenue larger than one will be used to 
+                                    individual visit. Note that in this step, only the observations that have transaction revenue larger than zero will be used to 
                                     train the model.  </p>
                                 <p class="font-weight-normal">Generalized Linear Regression Model (GLM) refers to conventional linear regression models for a 
                                         continuous response variable given continuous and/or categorical predictors. In this case, response variable, also known as 
