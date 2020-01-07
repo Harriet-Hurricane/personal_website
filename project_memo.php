@@ -42,7 +42,7 @@
         });
     }    
     window.onload = function() {
-            load_memo('1');
+            load_blog('a');
         };
      
 </script>
