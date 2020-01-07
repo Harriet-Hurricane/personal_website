@@ -4,7 +4,7 @@
 <head>
     <title>Google Analytics Customer Revenue Prediction</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property='og:image' content='images/Customer-Success-Revenue.jpg' />
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -105,7 +105,7 @@
                     <div class="row">
                         <div class="col-lg-10">
                             <!-- Project memo -->
-                            <div id="project-memo" class="row">
+                            <div id="project-memo">
                                 <!-- Filled by js function call to jquery using Ajax to test.php -->
                             </div>
                             <!-- END-->
