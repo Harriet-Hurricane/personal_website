@@ -69,9 +69,7 @@
     // ALP Google Analytics Project
 	if($project=="a")
 	{
-        ?>
-        <section class="ftco-section">
-            <div class="container">               
+        ?>          
                 <div class="col-md-12">
                     <div class="blog-entry ftco-animate">
                         <!-- Here is how you add different Headings --> 
@@ -302,8 +300,6 @@ finalpd$prediction <- (finalpd$fitted.result2)*(finalpd$trpd)
 
                     </div>
                 </div>  
-            </div>
-        </section>
 
         <?php
     }
