@@ -48,6 +48,8 @@
     
 	if($project=="1")
 	{
+		
+		echo "<meta property='og:image' content='images/image_1.jpg' />"
 		echo "<iframe class=\"scribd_iframe_embed\" title=\"Project 1\" src=\"https://www.scribd.com/embeds/396198288/content?start_page=1&view_mode=scroll&show_recommendations=false&access_key=key-Ad5Fj6R79UKcEpSZ0rLb\" data-auto-height=\"true\" data-aspect-ratio=\"null\" scrolling=\"no\" width=\"100%\" height=\"900\" frameborder=\"0\"></iframe>";
 	}
 	else if($project=="2")
