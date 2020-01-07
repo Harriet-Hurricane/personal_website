@@ -4,6 +4,7 @@
 <head>
     <title>Yihan Peng</title>
     <meta charset="utf-8">
+    <meta property='og:image' content='images/bg_1.jpg' />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
